@@ -38,5 +38,44 @@ namespace Service.UnitTest
 
             Assert.AreEqual(expected, actual);
         }
+
+        [TestMethod]
+        public void ProductTest_傳入mulitplicand為5_multiplier為3_預期回傳15()
+        {
+            var mulitplicand = 5;
+            var multiplier = 3;
+
+            var expected = 15;
+
+            var actual = this.service.Product(mulitplicand, multiplier);
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void QuotientTest_傳入dividend為4_divisor為2_預期回傳2()
+        {
+            var dividend = 4;
+            var divisor = 2;
+
+            var expected = 2;
+
+            var actual = this.service.Quotient(dividend, divisor);
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void QuotientTest_傳入dividend為4_divisor為0_預期回傳0()
+        {
+            var dividend = 4;
+            var divisor = 0;
+
+            var expected = 0;
+
+            var actual = this.service.Quotient(dividend, divisor);
+
+            Assert.AreEqual(expected, actual);
+        }
     }
 }
